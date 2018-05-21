@@ -112,50 +112,115 @@ namespace HelloWorld
             //    Console.WriteLine("We will march to {0}", cityThree);
             //}
 
-            Console.WriteLine("What is your rank soldier?");
-            string rank = Console.ReadLine().ToLower();
+            //Console.WriteLine("What is your rank soldier?");
+            //string rank = Console.ReadLine().ToLower();
 
-            Console.WriteLine("What is your age soldier?");
-            int age = int.Parse(Console.ReadLine());
+            //Console.WriteLine("What is your age soldier?");
+            //int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("What is your job soldier?");
-            string job = Console.ReadLine().ToLower();
+            //Console.WriteLine("What is your job soldier?");
+            //string job = Console.ReadLine().ToLower();
 
-            if ((rank == "officer") || (age <= 26))
+            //if ((rank == "officer") || (age <= 26))
+            //{
+            //    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+            //}
+            //else if ((job == "cook") && (age >= 26))
+            //{
+            //    Console.WriteLine("My army has to eat. Pack your pots and pans.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sorry, you are staying home.");
+            //}
+
+            //switch (job)
+            //{
+            //    case "infantry":
+            //        Console.WriteLine("You will carry a sword.");
+            //        break;
+
+            //    case "archer":
+            //        Console.WriteLine("You will carry a bow and arrow.");
+            //        break;
+
+            //    case "supply":
+            //        Console.WriteLine("You will carry pots and pans.");
+            //        break;
+
+            //    case "specialist":
+            //        Console.WriteLine("You will operate the catapult.");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("You will ride horseback.");
+            //        break;
+            //}
+
+
+            // Part twelve array examples
+            //string[] foodList = new string[5];
+            //foodList[0] = "Milk";
+            //foodList[1] = "Fruit";
+            //foodList[2] = "Meat";
+            //foodList[3] = "Wine";
+            //foodList[4] = "Bread";
+            //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            //int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            //Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " + foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+            //Console.WriteLine(foodList.Length);
+
+            //string[] elements = messageTwo.Split(' ');
+            //Console.WriteLine(elements[0]); // prints "I"
+            //Console.WriteLine(elements[1]); // prints "am"
+            //Console.WriteLine(elements[2]); // prints "Spartacus"
+
+            //List<string> foodList = new List<string>();
+            //foodList.Add("Milk");
+            //foodList.Add("Fruit");
+            //foodList.Add("Meat");
+            //foodList.Add("Wine");
+            //foodList.Add("Bread");
+            //foodList.Add("Pepsi");
+            //    Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4], foodList[5]);
+            //    foodList.Remove("Pepsi");
+            //    Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            //    foodList.Insert(1, "Pepsi");
+            //    Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4], foodList[5]);
+            //    foodList.RemoveAt(1);
+            //    Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+
+            // Part thirteen while loop example
+            string action = " ";
+            // while (action != "exit")
+            do
             {
-                Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
-            }
-            else if ((job == "cook") && (age >= 26))
-            {
-                Console.WriteLine("My army has to eat. Pack your pots and pans.");
-            }
-            else
-            {
-                Console.WriteLine("Sorry, you are staying home.");
-            }
+                Console.WriteLine("What is your rank soldier?");
+                string rank = Console.ReadLine();
 
-            switch (job)
-            {
-                case "infantry":
-                    Console.WriteLine("You will carry a sword.");
-                    break;
+                Console.WriteLine("What is your age soldier?");
+                int age = int.Parse(Console.ReadLine());
 
-                case "archer":
-                    Console.WriteLine("You will carry a bow and arrow.");
-                    break;
+                Console.WriteLine("What is your job soldier?");
+                string job = Console.ReadLine();
 
-                case "supply":
-                    Console.WriteLine("You will carry pots and pans.");
-                    break;
+                if ((rank == "officer") || (age <= 26))
+                {
+                    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+                }
+                else if ((job == "cook") || (age >= 26))
+                {
+                    Console.WriteLine("My army has to eat. Pack your pots and pans");
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, you are staying home.");
+                }
+                Console.WriteLine("Add another? Type exit to quit");
+                action = Console.ReadLine();
+            } while (action != "exit");
 
-                case "specialist":
-                    Console.WriteLine("You will operate the catapult.");
-                    break;
 
-                default:
-                    Console.WriteLine("You will ride horseback.");
-                    break;
-            }
 
 
         }
