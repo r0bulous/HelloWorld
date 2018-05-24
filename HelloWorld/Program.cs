@@ -14,6 +14,7 @@ namespace HelloWorld
             string messageOne = "Hello World!";
             string messageTwo = "I am Spartacus";
 
+
             // Part two set initial Spartacus attributes
             int ageOne = 35;
             int ageTwo = 45;
@@ -26,6 +27,17 @@ namespace HelloWorld
             bool isGodLikeTwo = false;
             char genderMale = 'M';
             char genderFemale = 'F';
+
+            // Bool method call
+            bool isGodLike = true; // I am not showing all the code.
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+
+            // Reverse method call
+            //Console.WriteLine(Reverse(messageTwo));
+
+            // Int array call
+
 
             //// Part three display variable values
             //Console.WriteLine(messageOne);//Displays initial greering to console
@@ -225,15 +237,47 @@ namespace HelloWorld
             //{
             //    Console.WriteLine(i);
             //}
-            for (int i = 0; i < foodAmount.Length; i++)
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine("Enter a value for " + foodList[i]);
+            //    foodAmount[i] = int.Parse(Console.ReadLine());
+            //}
+
+
+
+
+
+
+            // Bool method
+        }
+
+        static bool IsGodLike(int age)
+        {
+            bool status;
+            if (age % 2 == 0)
             {
-                Console.WriteLine("Enter a value for " + foodList[i]);
-                foodAmount[i] = int.Parse(Console.ReadLine());
+                status = false;
             }
-
-
+            else
+            {
+                status = true;
+            }
+            return status;
 
 
         }
+        //// Reverse method
+        //static string Reverse(string text)
+        //{
+        //    char[] cArray = text.ToCharArray();
+        //    string reverse = " ";
+        //    for (int i = cArray.Length - 1; i > -1; i--)
+        //    {
+        //        reverse += cArray[i];
+        //    }
+        //    return reverse;
+        //}
+
+
     }
 }
